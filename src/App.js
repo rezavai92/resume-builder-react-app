@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {BrowserRouter,Route,Link} from 'react-router-dom'
+import PageOne from './components/PageOne/pageone';
+import PageTwo from './components/PageTwo/pagetwo';
+import FinalPage from './components/FinalPage/finalpage';
+import AddExperience from './components/Experience/AddExperience'
+import PageContextProvider from './components/contexts/pagecontext';
+import Certification from './components/Certification/addCertification'
+import Home from './components/Home/home'
+import HomeNav from './components/HomeNav/homenav'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+const App=()=>{
+
+
+return(
+    <div>         
+
+ <PageContextProvider>
+ <BrowserRouter>
+   <Route path="/" exact component={Home}  /> 
+  <Route path='/form/basicinfo'  exact component={PageOne} />
+  <Route path='/form/education' exact component={PageTwo}  />
+  <Route path='/form/finalpage' exact component={FinalPage}  />
+  <Route path='/form/experience' exact component={AddExperience} />
+  <Route path="/form/certification" exact component={Certification} />
+
+ </BrowserRouter>
+ </PageContextProvider>
+ </div>
+)
 }
-
 export default App;

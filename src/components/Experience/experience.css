@@ -1,0 +1,21 @@
+.ex-flex input {
+
+width: 100%;
+height: 42px;
+border: 1px solid white;
+}
+
+.ex-flex div{
+    margin-top: 2%;
+}
+
+.date input {
+    width: 42%;
+}
+
+textarea{
+
+    width:70%;
+    border: 1px solid white;
+    
+}

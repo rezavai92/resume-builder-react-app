@@ -1,0 +1,35 @@
+.form-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.form-flex div{
+
+    margin-top: 2%;
+
+}
+.error-box{
+
+    text-align: center;
+    border: 1px solid silver;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color:red;
+    background-color: #fff;
+    width: 50%;
+    
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+
+}
+
+.ex-link{
+
+    text-align: center;
+    margin-top: 2%;
+    color: white;
+}

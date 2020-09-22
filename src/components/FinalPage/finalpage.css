@@ -1,0 +1,88 @@
+
+
+.cv-holder{
+    position: relative;
+    
+}
+.pdf-button{
+
+    position: absolute;
+    top: 0%;
+    right:21%;
+}
+.cv{
+    display : grid;
+    grid-template-columns: repeat(12,1fr) ;
+    grid-template-rows: repeat(12,1fr);
+    margin:5% 0% 2% 20%;
+    height: 297mm;
+    width: 210mm;
+    border:1px solid white;
+    padding:25.4mm 31.7mm  25.4mm 31.7mm;
+    justify-content: space-around;
+    background-color: white;
+    font-size: 12px;
+
+}
+
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.item2{
+    padding: 0px;
+    grid-column-start: 6;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.item2 h2,.item p{
+margin:0px;
+padding:0px;
+    
+}
+.item2 h2 ,.item4 h2, .item3 h2{
+    color:#616160;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.item3{
+
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 7 ;
+    grid-row-end: 13;
+    
+   
+
+}
+
+.item4 {
+    grid-column-start: 6;
+    grid-column-end: 13;
+    grid-row-start: 3 ;
+    grid-row-end: 13;
+   
+    
+}
+
+.item4-flex{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:480px){
+
+
+    .cv{
+
+        overflow-x: scroll;
+    }
+}

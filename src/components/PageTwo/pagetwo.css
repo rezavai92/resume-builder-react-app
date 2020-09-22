@@ -1,0 +1,52 @@
+
+.pagetwo{
+    margin-top: 5%;
+}
+
+
+.jumbotron{
+    margin-top: 5%;
+    position: relative;
+}
+.pagetwo h2{
+
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+}
+.page-two-grid {
+
+    margin: 2% 0% 1% 28%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-around;
+}
+.link-flex{
+    display: flex;
+    
+    justify-content: space-around;
+}
+
+.submit{
+    text-align: center;
+}
+
+
+.university,.degree,.passing-year,.cgpa{
+
+    margin-top: 2%;
+}
+
+.university input , .degree input {
+
+    width: 100%;
+height: 42px;
+border: 1px solid white;
+
+}
+
+.passing-year input , .cgpa input{
+
+    height : 42px;
+    border:1px solid white;
+}
