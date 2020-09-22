@@ -76,7 +76,7 @@ const FinalPage =()=>{
       </Button>
      </div>
 {pageOne||pageTwo||pageThree?
-  <div className="cv-holder" >  
+  <div className="cv-holder Container" >  
      <div className="pdf-button"> <Button variant="primary"  onClick={handlePdf}  >download PDF</Button> </div>
   <div ref={myRef}  className="cv">
     
@@ -89,16 +89,16 @@ const FinalPage =()=>{
     <p>{pageOne.address}</p>
 
     <div> 
-    <p>  <span style={{fontWeight:"bold"}} > Gender : </span>  {pageOne.gender}</p>
-    <p><span style={{fontWeight:"bold", fontSize:"12px" }} >Email :</span>{pageOne.email}</p>
-    <p><span style={{fontWeight:"bold",fontSize:"12px"}} >Phone :</span>{pageOne.phone}</p>
+    <p>  <span>Gender:</span>  {pageOne.gender}</p>
+    <p><span >Email :</span>{pageOne.email}</p>
+    <p><span >Phone :</span>{pageOne.phone}</p>
             
     </div>
     </div>
 
     <div className="item2">
         <h2>Education</h2>
-        <p style={{fontWeight:"bold"}} > {pageTwo.degree} </p>
+        <p > {pageTwo.degree} </p>
         <p> {pageTwo.institute} </p>
         
          <p> <span>Passing Year :</span> {pageTwo.passingYear} <span> , CGPA :</span>{pageTwo.cgpa} </p>
@@ -122,23 +122,23 @@ const FinalPage =()=>{
 
         <h2>Experience</h2>
         <div className="item4-flex"> 
-
-        <div>
-            
-         <p  >  <span style={{fontWeight:"bold"}} > Company Name: </span> {exp1?exp1.title:""}</p>
-         <p> <span style={{fontWeight:"bold"}} > Position : </span> {exp1?exp1.role:""}</p>
-         <p> <span style={{fontWeight:"bold"}} > Descritption </span> {exp1?exp1.desc:""}</p>
+        
+        {exp1? <div>
+            <h5>#1.</h5>
+         <p >  <span > Company Name: </span> {exp1?exp1.title:""}</p>
+         <p> <span  > Position : </span> {exp1?exp1.role:""}</p>
+         <p> <span > Descritption </span> {exp1?exp1.desc:""}</p>
          <p>{exp1?exp1.from:""} <span style={{fontWeight:"bold"}} >to</span> {exp1?exp1.to:""} </p>
        
-         </div>
+         </div>:null}
 
-         <div>
-         <p>{exp2?exp2.title:""}</p>
-         <p>{exp2?exp2.role:""}</p>
-         <p>{exp2?exp2.desc:""}</p>
-         <p>{exp2?exp2.from:""}</p>
-         <p>{exp2?exp2.to:""}</p>
-         </div>
+        {exp2? <div>
+             <h5>#2.</h5>
+         <p >  <span > Company Name: </span> {exp2?exp2.title:""}</p>
+         <p> <span  > Position : </span> {exp2?exp2.role:""}</p>
+         <p> <span > Descritption </span> {exp2?exp2.desc:""}</p>
+         <p>{exp2?exp2.from:""} <span style={{fontWeight:"bold"}} >to</span> {exp2?exp2.to:""} </p>
+         </div>:null}
         </div>
 
     </div>

@@ -24,6 +24,9 @@
     font-size: 12px;
 
 }
+.cv p span{
+    font-weight: bold;
+}
 
 .item1{
     grid-column-start: 1;
@@ -83,6 +86,25 @@ padding:0px;
 
     .cv{
 
-        overflow-x: scroll;
+        padding: 10% 10% ;
+        height: 100vh;
+        width: 90vw;
+        margin: 2%;
+        
+    }
+    .cv p{
+        font-size: 8px;
+    }
+
+    .cv h1,h2,h3{
+        font-size: 10px;
+
+    }
+    .cv h4,h5,h6{
+        font-size: 12px;
+    }
+    .cv img{
+        width: 70px;
+        height: 65px;
     }
 }

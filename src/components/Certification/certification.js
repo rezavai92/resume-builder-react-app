@@ -3,6 +3,7 @@ import './certification.css'
 import HomeNav from '../HomeNav/homenav'
 import {PageContext} from '../contexts/pagecontext'
 import {Button} from 'react-bootstrap'
+import './certification.css'
 const Certification = (props)=>{
 
     const [title,setTitle] =useState("");
@@ -34,7 +35,7 @@ const Certification = (props)=>{
 
     return(<div>
         <form onSubmit={(e)=>{certSubmitHandler(e)} } >
-      <div>
+      <div class="certi" >
         <input type="text" value={title} onChange={(e)=>TitleHandler(e)} placeholder="Title" />
         <input type="text" value={institute} onChange={e=>InstituteHandler(e)} placeholder="institute" />
         <input type="text" value={link} onChange={e=>LinkHandler(e)} placeholder="link" />
