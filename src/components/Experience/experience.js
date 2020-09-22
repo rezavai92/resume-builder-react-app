@@ -64,7 +64,7 @@ const submitHandler =(e)=>{
 
 return (
           <div> 
-              <HomeNav></HomeNav>
+              
         <div className="container">
         
         <form onSubmit={ (e)=>{submitHandler(e)} } >
