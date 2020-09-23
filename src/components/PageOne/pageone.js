@@ -122,7 +122,7 @@ const PageOne =()=>{
                         
                         <div className="button">
                         
-                      <Button type="submit" variant="success" >Ok </Button>
+                      <Button type="submit" variant="success" >OK </Button>
                         </div>
 
                     

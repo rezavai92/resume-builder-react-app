@@ -95,7 +95,7 @@ const PageTwo =()=>{
                     type="number" placeholder=" CGPA (e.g. 3.50)" />
                 </div>
                 <div className="submit">  
-                    <Button type="submit" variant="success" >Ok</Button>
+                    <Button type="submit" variant="success" >OK</Button>
                  </div>
                 </div>
 

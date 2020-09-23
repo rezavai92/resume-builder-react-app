@@ -89,7 +89,7 @@ return (
           </div>
         </div >
         <div style={{textAlign:"center"}}>
-        <Button type="submit" varinat="success" > Finish Step </Button>
+        <Button type="submit" variant="success" > OK</Button>
         </div>
         </div>
         </form>

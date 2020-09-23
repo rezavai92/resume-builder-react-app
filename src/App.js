@@ -8,6 +8,8 @@ import PageContextProvider from './components/contexts/pagecontext';
 import Certification from './components/Certification/addCertification'
 import Home from './components/Home/home'
 import HomeNav from './components/HomeNav/homenav'
+import Pricing from './components/Pricing/priciing'
+import Features from './components/Features/feature'
 import './App.css'
 
 
@@ -27,6 +29,8 @@ return(
   <Route path='/form/finalpage' exact component={FinalPage}  />
   <Route path='/form/experience' exact component={AddExperience} />
   <Route path="/form/certification" exact component={Certification} />
+  <Route path="/pricing" exact component={Pricing} />
+  <Route  path="/features" exact component ={Features}  />
 
  </BrowserRouter>
  </PageContextProvider>
