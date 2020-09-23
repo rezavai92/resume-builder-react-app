@@ -66,14 +66,14 @@ const PageOne =()=>{
 
         e.preventDefault();
         //console.log(firstName);
-        console.log("hello from submit")
+        console.log("hello from submit",src)
         const item ={name:name,email:email,phone:phone ,gender:gender,address:address, src:src };
         
        addPageOne(item);
        setName("");
        setEmail("");
        setAddress("");
-       setSrc("");
+       //setSrc("");
        setPhone("");
        setGender("");
 
@@ -82,7 +82,7 @@ const PageOne =()=>{
     return(<div>
 
 
-<HomeNav></HomeNav>
+   <HomeNav></HomeNav>
 
 <div className="container">
         <h2>Personal Information</h2>
