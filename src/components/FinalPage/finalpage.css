@@ -14,11 +14,11 @@
     display : grid;
     grid-template-columns: repeat(12,1fr) ;
     grid-template-rows: repeat(12,1fr);
-    margin:5% 0% 2% 20%;
+    margin:5% 0% 2% 26%;
     height: 297mm;
     width: 210mm;
     border:1px solid white;
-    padding:25.4mm 31.7mm  25.4mm 31.7mm;
+    padding: 5%;
     justify-content: space-around;
     background-color: white;
     font-size: 12px;
@@ -87,9 +87,9 @@ padding:0px;
     .cv{
 
         padding: 10% 10% ;
-        height: 100vh;
-        width: 90vw;
-        margin: 2%;
+        height: 49rem;
+        width:  95vw;
+        margin: 2% 5%;
         
     }
     .cv p{

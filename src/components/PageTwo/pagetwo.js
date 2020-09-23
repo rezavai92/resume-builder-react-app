@@ -68,7 +68,8 @@ const PageTwo =()=>{
             
         </HomeNav>
 <div className="container pagetwo">
-        <h2>Education</h2>
+        <h1>Education</h1>
+        <hr/>
         <form onSubmit={(e)=>{submitHandler(e)}} >
 
             <div className="jumbotron" >

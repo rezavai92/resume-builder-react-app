@@ -70,7 +70,7 @@ const FinalPage =()=>{
         
      <div style={{textAlign:"center",marginTop:"2%"}}>
      <Button variant="primary" >
-      <Link to="/form/pagetwo" style={{textDecoration:"none",color:"white" }} >
+      <Link to="/form/certification" style={{textDecoration:"none",color:"white" }} >
                 previous page
       </Link>
       </Button>
@@ -101,7 +101,7 @@ const FinalPage =()=>{
         <p > {pageTwo.degree} </p>
         <p> {pageTwo.institute} </p>
         
-         <p> <span>Passing Year :</span> {pageTwo.passingYear} <span> , CGPA :</span>{pageTwo.cgpa} </p>
+         <p> <span>Passing Year :</span> {pageTwo.passingYear} , <span>CGPA :</span>{pageTwo.cgpa} </p>
          
     </div>
 

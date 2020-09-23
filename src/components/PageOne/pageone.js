@@ -85,7 +85,8 @@ const PageOne =()=>{
    <HomeNav></HomeNav>
 
 <div className="container">
-        <h2>Personal Information</h2>
+        <h1>Personal Information</h1>
+        <hr/>
         <form className="form"  onSubmit={(e)=>{submitHandler(e)}} >
             <div >
 

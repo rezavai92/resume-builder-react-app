@@ -78,7 +78,7 @@ return (
             <input onChange={ (e)=>{roleChangeHandler(e)} } value={role} placeholder="role" />
         </div>
         <div>
-            <textarea rows="10" cols="45" maxLength="500" onChange={(e)=>{descriptionChangeHandler(e)}} value={desc} placeholder="job description" />
+            <textarea rows="10" cols="45" maxLength="525" onChange={(e)=>{descriptionChangeHandler(e)}} value={desc} placeholder="job description" />
         </div>
             <div className="date">
             <span style={{fontWeight:"bold"}} > From: </span> <input onChange={ (e)=>{fromChangeHandler(e) }} value={from} placeholder="from" type="date" />

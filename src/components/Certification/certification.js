@@ -35,13 +35,20 @@ const Certification = (props)=>{
 
     return(<div>
         <form onSubmit={(e)=>{certSubmitHandler(e)} } >
-      <div class="certi" >
+      <div  >
+          <h1> #{props.id}. </h1>
+          <div className="cert-inp" >
         <input type="text" value={title} onChange={(e)=>TitleHandler(e)} placeholder="Title" />
-        <input type="text" value={institute} onChange={e=>InstituteHandler(e)} placeholder="institute" />
-        <input type="text" value={link} onChange={e=>LinkHandler(e)} placeholder="link" />
-        
-      </div>
-       <Button variant="success" type="submit"> OK </Button>
+
+        </div>
+       <div className="cert-inp" > <input type="text" value={institute} onChange={e=>InstituteHandler(e)} placeholder="institute" />
+       </div>
+        <div className="cert-inp" >
+            <input type="text" value={link} onChange={e=>LinkHandler(e)} placeholder="link" />
+         </div>
+        <div>       <Button variant="success" type="submit"> OK </Button>
+         </div>
+       </div> 
       </form>
     </div>)
 

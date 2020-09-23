@@ -57,7 +57,8 @@ console.log(limit)
     return(<div>
  <HomeNav></HomeNav>
 <div className="container">
-            <h2>Experience</h2>
+            <h1>Experience</h1>
+            <hr/>
         
         <div style={{textAlign:"center"}} > 
         
@@ -75,11 +76,23 @@ console.log(limit)
         {  mappedExperiences }
         </div>
         
-       <div className="ex-link" >
-      <Button variant="primary" > 
-      <Link style={{textDecoration:"none" ,color:"white" }} to="/form/certification" >Next </Link>
-      </Button>
-       </div>
+        <div  className="link-flex" >
+
+<div className="" >
+<Button variant="danger" >
+<Link style={{textDecoration:"none" , color:"white" }} to="/form/education">PREVIOUS </Link>
+</Button>
+</div>
+
+<div className="" >
+
+<Button variant="primary">
+<Link style={{textDecoration:"none",color:"white" }} to="/form/certification" >NEXT</Link>
+</Button>
+
+</div>
+
+</div>
     </div>
     </div>)
 }
