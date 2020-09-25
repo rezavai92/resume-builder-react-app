@@ -54,7 +54,7 @@ const FinalPage =()=>{
     
          
     
-        pdf.save("NrQuizBuilder.pdf");
+        pdf.save("resume.pdf");
       });
     ;
     
@@ -90,7 +90,7 @@ const FinalPage =()=>{
 
     <div> 
     <p>  <span>Gender:</span>  {pageOne.gender}</p>
-    <p><span >Email :</span>{pageOne.email}</p>
+    <p><span >Email : </span>{pageOne.email}</p>
     <p><span >Phone :</span>{pageOne.phone}</p>
             
     </div>

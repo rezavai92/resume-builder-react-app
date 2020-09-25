@@ -7,7 +7,7 @@ import HomeNav from '../HomeNav/homenav'
 const Home = ()=>{
 
 return(<div>
- <HomeNav> </HomeNav>
+  <HomeNav> </HomeNav>
 
     <div className="box" >
         <Link to="/form/basicinfo" ><h1>Let's Build</h1></Link>
