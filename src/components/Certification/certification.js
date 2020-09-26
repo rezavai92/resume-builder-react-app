@@ -6,11 +6,14 @@ import {Button} from 'react-bootstrap'
 import './certification.css'
 const Certification = (props)=>{
 
-    const [title,setTitle] =useState("");
-    const [institute,setInstitute] = useState("");
-    const [link,setLink] = useState("");
-    const { addPageFour} = useContext(PageContext);
+    const [title,setTitle] =useState(props.title);
+    const [institute,setInstitute] = useState(props.institute);
+    const [link,setLink] = useState(props.link);
+    const[isComplete,setIsComplete]=useState(props.isComplete)
+    const { addPageFour,progress,updateProgress} = useContext(PageContext);
 
+
+   
     const TitleHandler = (e)=>{
             setTitle(e.target.value);
     }
@@ -24,8 +27,12 @@ const Certification = (props)=>{
     const certSubmitHandler =(e)=>{
 
         e.preventDefault();
-        const item ={title:title,institute:institute,link:link,id:props.id};
+        const p = isComplete?null:12.5;
+        updateProgress(progress+p);
+        setIsComplete(true)
+        const item ={title:title,institute:institute,link:link,id:props.id,isComplete:true};
         addPageFour(item);
+       
         console.log(item);
         setTitle("");
         setInstitute("");

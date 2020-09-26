@@ -5,6 +5,7 @@ import './addExperience.css'
 import {PageContext} from '../contexts/pagecontext'
 import {Button} from 'react-bootstrap'
 import HomeNav from '../HomeNav/homenav'
+import ProgressBar from '../Progressbar/progressbar'
 
 const AddExperience =()=>{
 const [boundary,setBoundary] = useState(2);
@@ -13,7 +14,7 @@ const [visibility,setVisibility] = useState(false);
 
  const [experiences,setExperiences] =useState([]);
 
- const{pageThree,limit,changeLimit}  =useContext(PageContext);
+ const{pageThree,limit,changeLimit,progress,updateProgress}  =useContext(PageContext);
 
  useEffect(()=>{
     const ex=[...pageThree]; 
@@ -52,15 +53,16 @@ console.log(limit)
 
     const mappedExperiences = experiences.map((e)=>{return<div key={e.id} >
 
-        <Experience role={e.role} desc={e.desc} title={e.title} from={e.from} to={e.to} id={e.id} > </Experience>
+        <Experience now={progress} isComplete={e.isComplete} role={e.role} desc={e.desc} title={e.title} from={e.from} to={e.to} id={e.id} > </Experience>
     </div>})
     return(<div>
  <HomeNav></HomeNav>
 <div className="container">
-            <h1>Experience</h1>
+            <h1  >Experience</h1>
             <hr/>
+            <ProgressBar now={progress} />
         
-        <div style={{textAlign:"center"}} > 
+        <div style={{textAlign:"center",marginTop:"2%"}} > 
         
         
         <Button variant="primary" onClick={addExperienceHandler} >Add Experience</Button>

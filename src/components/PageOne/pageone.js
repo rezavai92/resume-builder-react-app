@@ -4,9 +4,10 @@ import {Link} from 'react-router-dom'
 import './pageone.css'
 import {Button,InputGroup,FormControl,Form} from 'react-bootstrap'
 import HomeNav from '../HomeNav/homenav'
+import ProgressBar from '../Progressbar/progressbar'
 
 const PageOne =()=>{
-    const{pageOne,addPageOne} = useContext(PageContext);
+    const{pageOne,addPageOne,progress,updateProgress} = useContext(PageContext);
    // console.log(pageOne);
     const [name,setName] =useState("");
     const [email,setEmail] = useState("");
@@ -14,15 +15,18 @@ const PageOne =()=>{
     const [gender,setGender] = useState("");
     const [src,setSrc] =useState('');
     const [phone,setPhone] = useState('');
-    
+    const[isComplete,setIsComplete] = useState(false);
     
     useEffect(()=>{
     
+        
         setName (pageOne.name);
         
         setEmail(pageOne.email);
         setAddress(pageOne.address);
         setPhone(pageOne.phone);
+        setIsComplete(pageOne.isComplete);
+    
     },[])
 
     const addressChangeHandler=(e)=>{
@@ -67,7 +71,10 @@ const PageOne =()=>{
         e.preventDefault();
         //console.log(firstName);
         console.log("hello from submit",src)
-        const item ={name:name,email:email,phone:phone ,gender:gender,address:address, src:src };
+        let p =!isComplete? (progress+25):progress;
+        updateProgress(p) ;
+        setIsComplete(true);
+          const item ={name:name,email:email,phone:phone,isComplete:true ,gender:gender,address:address, src:src };
         
        addPageOne(item);
        setName("");
@@ -76,7 +83,8 @@ const PageOne =()=>{
        //setSrc("");
        setPhone("");
        setGender("");
-
+       
+      
     }
     
     return(<div>
@@ -87,6 +95,7 @@ const PageOne =()=>{
 <div className="container">
         <h1>Personal Information</h1>
         <hr/>
+        <ProgressBar now={progress} ></ProgressBar>
         <form className="form"  onSubmit={(e)=>{submitHandler(e)}} >
             <div >
 

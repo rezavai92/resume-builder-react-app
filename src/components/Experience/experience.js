@@ -1,4 +1,4 @@
-import React,{useContext,useState,useRef} from 'react'
+import React,{useContext,useState,useRef, useEffect} from 'react'
 import { Button } from 'react-bootstrap';
 import {PageContext} from '../contexts/pagecontext'
 import './experience.css'
@@ -11,12 +11,10 @@ const [desc,setDesc] = useState(props.desc);
 const [from,setFrom] = useState(props.from);
 const [to,setTo] = useState(props.to);
 const [id,setId] = useState(props.id);
-
-const myRef = useRef();
-
+const[isComplete,setIsComplete] = useState(props.isComplete)
 
 
-const   {addPageThree  }  = useContext(PageContext);
+const   {addPageThree ,pageThree,progress,updateProgress }  = useContext(PageContext);
 
 
 
@@ -48,9 +46,12 @@ setTo(e.target.value)
 const submitHandler =(e)=>{
 
     e.preventDefault();
-
-    addPageThree({title:title,role:role,desc:desc,from:from,to:to,id: id });
+    let p =!isComplete? (progress+12.5):progress;
+    updateProgress(p) ;
+    setIsComplete(true);
+    addPageThree({title:title,role:role,desc:desc,from:from,to:to,id: id,isComplete:true });
     console.log(title);
+    
     setTitle("");
     setRole("");
     setDesc("");
@@ -58,8 +59,7 @@ const submitHandler =(e)=>{
     setTo("");
    // myRef.current="<div> Added</div>"
 
-    console.log(myRef.current[0
-    ])
+    
 }
 
 return (
@@ -70,7 +70,7 @@ return (
         <form onSubmit={ (e)=>{submitHandler(e)} } >
         
         <div className="jumbotron" >
-        <div ref={myRef}  className="ex-flex" >
+        <div   className="ex-flex" >
         <div>
             <input onChange={(e)=>{titleChangeHandler(e)}} value={title} placeholder="title" />
         </div>

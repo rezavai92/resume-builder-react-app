@@ -10,6 +10,7 @@ const PageContextProvider =(props)=>{
     const [pageFour,setPageFour] = useState([]);
     const [finalpage,setFinalPage] = useState({});
     const [limit,setLimit] = useState(2);
+    const[progress,setProgress] =useState(0);
     
     useEffect(()=>{
         //console.log("running from page context")
@@ -19,6 +20,12 @@ const PageContextProvider =(props)=>{
         );
     },[pageOne,pageTwo,pageThree,pageFour]);
 
+
+    const updateProgress = (p)=>{
+        
+        setProgress(p);
+        console.log(p);
+    }
     const addPageFour = (item)=>{
         console.log("item  for page four enters in page context",item);
         let pageFourList = [...pageFour];
@@ -69,7 +76,7 @@ const PageContextProvider =(props)=>{
    
 
     return (
-        <PageContext.Provider value={{ pageFour:pageFour,pageOne: pageOne,pageTwo:pageTwo,pageThree:pageThree,finalPage:finalpage,
+        <PageContext.Provider value={{progress:progress,updateProgress:updateProgress ,pageFour:pageFour,pageOne: pageOne,pageTwo:pageTwo,pageThree:pageThree,finalPage:finalpage,
         addPageOne:addPageOne,limit:limit,changeLimit:changeLimit,addPageFour:addPageFour ,addPageTwo: addPageTwo, addPageThree:addPageThree}} >
            
             {props.children}

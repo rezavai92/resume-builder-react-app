@@ -3,6 +3,7 @@ import  {PageContext} from '../contexts/pagecontext'
 import {Link} from 'react-router-dom'
 import {Button} from 'react-bootstrap'
 import HomeNav from '../HomeNav/homenav'
+import ProgressBar from '../Progressbar/progressbar'
 import './pagetwo.css'
 
 
@@ -11,7 +12,8 @@ const PageTwo =()=>{
     const [degree,setDegree] = useState("");
     const [passingYear,setPassingYear] = useState("");
     const [cgpa,setCgpa] = useState("");
-    const {pageTwo,addPageTwo} = useContext(PageContext);
+    const[isComplete,setIsComplete] = useState(false)
+    const {pageTwo,addPageTwo,progress,updateProgress} = useContext(PageContext);
     
     useEffect(()=>{
         
@@ -19,7 +21,7 @@ const PageTwo =()=>{
         setDegree(pageTwo.degree);
         setPassingYear(pageTwo.passingYear);
         setCgpa(pageTwo.cgpa);
-    
+        setIsComplete(pageTwo.isComplete);
         
     },[])
    
@@ -52,8 +54,12 @@ const PageTwo =()=>{
     const submitHandler =(e)=>{
 
         e.preventDefault();
-        const item ={institute:institute,degree:degree,passingYear:passingYear,cgpa:cgpa};
+        let p =!isComplete? (progress+25):progress;
+        updateProgress(p) ;
+        setIsComplete(true);
+        const item ={institute:institute,isComplete:true,degree:degree,passingYear:passingYear,cgpa:cgpa};
         addPageTwo(item);
+        
         setInstitute("");
         setDegree("");
         setPassingYear("");
@@ -67,8 +73,10 @@ const PageTwo =()=>{
         <HomeNav> 
             
         </HomeNav>
+       
 <div className="container pagetwo">
         <h1>Education</h1>
+        <ProgressBar now={progress} ></ProgressBar>
         <hr/>
         <form onSubmit={(e)=>{submitHandler(e)}} >
 
