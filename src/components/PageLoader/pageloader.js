@@ -4,7 +4,7 @@ import "./pageloader.css"
 const Loader = (props)=>{
 
 
-return(<div className="spinner">
+return(<div  className="spinner">
 <h3>
       {props.text}
 </h3>

@@ -1,9 +1,12 @@
 
 body{
-  background-color: #00FF80;
+  background-color: #e51df0;
+  color : white;
 }
 
-
+.jumbotron{
+  color:black;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

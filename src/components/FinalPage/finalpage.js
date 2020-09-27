@@ -67,11 +67,15 @@ const FinalPage =()=>{
     }
     
     return(<div>
+         <HomeNav></HomeNav>
+    {isLoading?<div className="pdf-loader"> 
 
-  {isLoading?<PageLoader text="Getting Ready!" /> :<div>
+        <PageLoader  text="Getting Ready" />
+    </div>:null}
+   <div>
       
       
-      <HomeNav></HomeNav>
+     
   
           
   <div style={{textAlign:"center",marginTop:"2%"}}>
@@ -155,7 +159,7 @@ const FinalPage =()=>{
   </div>
   : <p style={{textAlign:"center"}} >Nothing to Show,please go back and fill up previously asked fields</p> }
       
-         </div>}
+         </div>
 
    
     </div>)
