@@ -1,17 +1,30 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import {Nav,Navbar,NavDropdown} from 'react-bootstrap'
+import {Spinner} from 'react-bootstrap'
 import './home.css'
 import HomeNav from '../HomeNav/homenav'
+import PageLoader from '../PageLoader/pageloader'
+
 
 const Home = ()=>{
 
-return(<div>
-  <HomeNav> </HomeNav>
+  const[isLoading,setIsLoading] =useState(true);
+  useEffect(()=>{setIsLoading(false)},[])
 
-    <div className="box" >
-        <Link to="/form/basicinfo" ><h1>Let's Build</h1></Link>
+return(<div>
+  {isLoading? <PageLoader/>:
+  
+  <div>
+    <HomeNav> </HomeNav>
+
+
+<div className="box" >
+    <Link to="/form/basicinfo" ><h1>Let's Build</h1></Link>
+</div>
     </div>
+  
+  }
+  
 </div>)
 
 }

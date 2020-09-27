@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import {BrowserRouter,Route,Link} from 'react-router-dom'
 import PageOne from './components/PageOne/pageone';
 import PageTwo from './components/PageTwo/pagetwo';
@@ -11,7 +11,7 @@ import HomeNav from './components/HomeNav/homenav'
 import Pricing from './components/Pricing/priciing'
 import Features from './components/Features/feature'
 import './App.css'
-
+import {Spinner} from 'react-bootstrap'
 
 
 
@@ -20,10 +20,10 @@ const App=()=>{
 
 return(
     <div>         
-
+  
  <PageContextProvider>
  <BrowserRouter>
-   <Route path="/" exact component={Home}  /> 
+  <Route path="/" exact component={Home}  /> 
   <Route path='/form/basicinfo'  exact component={PageOne} />
   <Route path='/form/education' exact component={PageTwo}  />
   <Route path='/form/finalpage' exact component={FinalPage}  />
