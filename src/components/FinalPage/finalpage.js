@@ -27,8 +27,8 @@ const FinalPage =()=>{
         setPageTwo(finalPage.pageTwo);
         setPageThree(finalPage.pageThree);
         setPageFour(finalPage.pageFour);
-        setIsLoading(false);
-
+        setTimeout(()=>{setIsLoading(false);
+        },1000)
 
     },[])
 
@@ -68,7 +68,7 @@ const FinalPage =()=>{
     
     return(<div>
 
-  {isLoading?<PageLoader/> :<div>
+  {isLoading?<PageLoader text="Getting Ready!" /> :<div>
       
       
       <HomeNav></HomeNav>

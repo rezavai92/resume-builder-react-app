@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useContext} from 'react'
 import {Link} from 'react-router-dom'
 import {Spinner} from 'react-bootstrap'
 import './home.css'
@@ -9,10 +9,11 @@ import PageLoader from '../PageLoader/pageloader'
 const Home = ()=>{
 
   const[isLoading,setIsLoading] =useState(true);
-  useEffect(()=>{setIsLoading(false)},[])
+  
+  useEffect(()=>{setTimeout(()=>{setIsLoading(false)},1000) },[])
 
 return(<div>
-  {isLoading? <PageLoader/>:
+  {isLoading? <PageLoader text="Welcome!" />:
   
   <div>
     <HomeNav> </HomeNav>
