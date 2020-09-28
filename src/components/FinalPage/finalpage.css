@@ -8,13 +8,13 @@
 
     position: absolute;
     top: 0%;
-    right:21%;
+    right:25%;
 }
 .cv{
     display : grid;
     grid-template-columns: repeat(12,1fr) ;
     grid-template-rows: repeat(12,1fr);
-    margin:5% 0% 2% 26%;
+    margin:5% 20% 5% 22%;
     height: 297mm;
     width: 210mm;
     border:1px solid white;
@@ -86,15 +86,15 @@ padding:0px;
     max-width: 100%;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:768px){
 
 
     .cv{
 
         padding: 10% 10% ;
-        height: 49rem;
-        width:  95vw;
-        margin: 2% 5%;
+        height: 55rem;
+        width:  90VW;
+        margin: 2% 5% 5% 5%;
         
     }
     .cv p{

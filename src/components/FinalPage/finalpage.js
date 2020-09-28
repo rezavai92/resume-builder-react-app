@@ -137,7 +137,8 @@ const FinalPage =()=>{
          <h5>#1.</h5>
       <p >  <span > Company Name: </span> {exp1?exp1.title:""}</p>
       <p> <span  > Position : </span> {exp1?exp1.role:""}</p>
-      <p> <span > Descritption </span> {exp1?exp1.desc:""}</p>
+      <p> <span > Descritption : </span> </p>
+      <p> {exp1?exp1.desc:""}</p>
       <p>{exp1?exp1.from:""} <span style={{fontWeight:"bold"}} >to</span> {exp1?exp1.to:""} </p>
     
       </div>:null}
@@ -146,7 +147,8 @@ const FinalPage =()=>{
           <h5>#2.</h5>
       <p >  <span > Company Name: </span> {exp2?exp2.title:""}</p>
       <p> <span  > Position : </span> {exp2?exp2.role:""}</p>
-      <p> <span > Descritption </span> {exp2?exp2.desc:""}</p>
+      <p> <span > Descritption </span> </p> 
+      <p>{exp2?exp2.desc:""}</p>
       <p>{exp2?exp2.from:""} <span style={{fontWeight:"bold"}} >to</span> {exp2?exp2.to:""} </p>
       </div>:null}
      </div>

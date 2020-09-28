@@ -72,7 +72,7 @@ return (
         <div className="jumbotron" >
         <div   className="ex-flex" >
         <div>
-            <input onChange={(e)=>{titleChangeHandler(e)}} value={title} placeholder="title" />
+            <input onChange={(e)=>{titleChangeHandler(e)}} value={title} placeholder="company name" />
         </div>
         <div>
             <input onChange={ (e)=>{roleChangeHandler(e)} } value={role} placeholder="role" />
