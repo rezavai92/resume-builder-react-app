@@ -15,7 +15,27 @@
     padding-left: 5px;
     padding-right: 5px;
     cursor: pointer;
+    animation-name: box;
+    animation-duration: 1s;
+    
 }
+@keyframes box{
+    0% {left:-1000px};
+    100% {left:25%};
+
+}
+
+.box h1{
+    animation-name: box-header;
+    animation-duration: 5s;
+    position: relative;
+}
+@keyframes box-header{
+    0% {opacity :0};
+    100%{opacity: 100;}
+}
+
+
 .page-loader{
 
     background-color: silver;
