@@ -25,6 +25,9 @@
     color: black;
 
 }
+.cv p {
+    word-wrap: break-word;
+}
 .cv p span{
     font-weight: bold;
 }
@@ -86,7 +89,7 @@ padding:0px;
     max-width: 100%;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:480px){
 
 
     .cv{
@@ -113,6 +116,35 @@ padding:0px;
         height: 65px;
     }
 }
+
+@media screen and (max-width:768px){
+
+
+    .cv{
+
+        padding: 10% 10% ;
+        height: 55rem;
+        width:  90VW;
+        margin: 2% 5% 5% 5%;
+        
+    }
+    .cv p{
+        font-size: 10px;
+    }
+
+    .cv h1,h2,h3{
+        font-size: 12px;
+
+    }
+    .cv h4,h5,h6{
+        font-size: 14px;
+    }
+    .cv img{
+        width: 85px;
+        height: 75px;
+    }
+}
+
 
 .pdf-loader{
 

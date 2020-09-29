@@ -99,7 +99,7 @@ const FinalPage =()=>{
   <p>{pageOne.address}</p>
   
   <div> 
-  <p>  <span>Gender:</span>  {pageOne.gender}</p>
+  <p>  <span>Gender : </span>  {pageOne.gender}</p>
   <p><span >Email : </span>{pageOne.email}</p>
   <p><span >Phone :</span>{pageOne.phone}</p>
          
@@ -111,7 +111,7 @@ const FinalPage =()=>{
      <p > {pageTwo.degree} </p>
      <p> {pageTwo.institute} </p>
      
-      <p> <span>Passing Year :</span> {pageTwo.passingYear} , <span>CGPA :</span>{pageTwo.cgpa} </p>
+      <p> <span>Passing Year : </span> {pageTwo.passingYear}, <span>CGPA : </span>{pageTwo.cgpa} </p>
       
   </div>
   
@@ -139,7 +139,7 @@ const FinalPage =()=>{
       <p> <span  > Position : </span> {exp1?exp1.role:""}</p>
       <p> <span > Descritption : </span> </p>
       <p> {exp1?exp1.desc:""}</p>
-      <p>{exp1?exp1.from:""} <span style={{fontWeight:"bold"}} >to</span> {exp1?exp1.to:""} </p>
+      <p>{exp1?exp1.from+" ":""} <span style={{fontWeight:"bold"}} > to </span> {exp1?exp1.to:""} </p>
     
       </div>:null}
   
@@ -147,9 +147,9 @@ const FinalPage =()=>{
           <h5>#2.</h5>
       <p >  <span > Company Name: </span> {exp2?exp2.title:""}</p>
       <p> <span  > Position : </span> {exp2?exp2.role:""}</p>
-      <p> <span > Descritption </span> </p> 
+      <p> <span > Descritption : </span> </p> 
       <p>{exp2?exp2.desc:""}</p>
-      <p>{exp2?exp2.from:""} <span style={{fontWeight:"bold"}} >to</span> {exp2?exp2.to:""} </p>
+      <p>{exp2?exp2.from:""} <span style={{fontWeight:"bold"}} > to </span> {exp2?exp2.to:""} </p>
       </div>:null}
      </div>
   
